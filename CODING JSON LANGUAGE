@@ -47,7 +47,7 @@
                 var quant = Number(document.getElementById("quant").value);
 
                 if (destination == "Tagbilaran"){
-                    var price = 2100 ;
+                    var price = 2100;
                 }
                 else if (destination == "Davao"){
 
@@ -55,7 +55,7 @@
                 }
                 else if (destination == "Manila"){
 
-                    var price = 1700 ;
+                    var price = 1700;
                 }
                 else if (ticketType == "two"){
                     var fare = price * 2;
