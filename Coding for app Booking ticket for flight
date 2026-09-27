@@ -1,11 +1,11 @@
 <html> 
     <head>
-        <title>Booking Ticket</title>
+        <title>Demo Ticket</title>
     </head>
 
     <body>
         <header>
-            <h1>Ticket Booking System</h1>
+            <h1>Ticket Ordering System</h1>
         </header>
         <hr>
 
@@ -16,15 +16,15 @@
 
                     Destination:
                     <select id = "destination" required>
-                        <option value = "Manila">Tagbilaran - 2,100</option>
-                        <option value = "Cebu">Davao - 1,800</option>
-                        <option value = "Tagbilaran">Manila - 1,700</option>
+                        <option value = "Manila">Manila - 100</option>
+                        <option value = "Pasay">Pasay - 150</option>
+                        <option value = "Quezon">Quezon - 200</option>
                     </select> <br> <br>
 
                     Ticket Type:
                     <select id = "Ticket Type" required>
                         <option value = "one">One-way</option>
-                        <option value = "round">Round-trip</option>
+                        <option value = "two">Two-way</option>
                     </select> <br> <br>
 
                     Number of Passengers:
@@ -46,22 +46,22 @@
                 var ticketType = document.getElementById("Ticket Type").value;
                 var quant = Number(document.getElementById("quant").value);
 
-                if (destination == "Tagbilaran"){
-                    var price = 2,100 ;
+                if (destination == "Manila"){
+                    var price = 100;
                 }
-                else if (destination == "Davao"){
+                else if (destination == "Pasay"){
 
-                    var price = 1,800;
+                    var price = 150;
                 }
-                else if (destination == "Manila"){
+                else if (destination == "Quezon"){
 
-                    var price = 1,700 ;
+                    var price = 200;
                 }
                 else if (ticketType == "two"){
                     var fare = price * 2;
                 }
 
-                var total = quant * price * destination;
+                var total = quant + price + destination;
 
                 
                 document.getElementById("output").innerHTML = "Customer name: " + name + "<br>" + 
